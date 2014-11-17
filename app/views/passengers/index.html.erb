@@ -13,9 +13,11 @@
     <tbody>
       <% @passengers.each do |passenger| %>
         <tr>
-          <td><%= passenger.name %></td>
           <td>
-            <em>link to the suitcases for this passenger here</em>
+            <%= passenger.name %>
+            </td>
+          <td>
+          <%= link_to "#{passenger.name}'s Suitcases",  passenger_suitcases_path(passenger) %>
           </td>
         </tr>
       <% end %>
